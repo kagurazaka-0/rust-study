@@ -1,9 +1,8 @@
 # Rustの勉強用
 
 ## 環境構築及びHello World
-こちらを参考にしました
 
-- [Rustの日本語ドキュメント 2.はじめる](https://doc.rust-jp.rs/the-rust-programming-language-ja/1.9/book/getting-started.html)
+- 参考: [Rustの日本語ドキュメント 2.はじめる](https://doc.rust-jp.rs/the-rust-programming-language-ja/1.9/book/getting-started.html)
 
 1. `curl https://sh.rustup.rs -sSf | sh`を実行
 
@@ -44,3 +43,19 @@ fn main() {
 5. `rustc hello_world.rs`でコンパイルし、`./hello_world`でhello world!
 
 Rust上でhello worldができました。
+
+## VSCodeで開発環境を整える
+
+- 参考:[Visual Studio Code で Rust 開発を始めるには - Qiita](https://qiita.com/chikoski/items/53590914cc6aacc8916d)
+
+1. [この拡張](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust)をインストール
+
+2. rustファイルを開くと、「Rustup not available」って怒られるので、vscodeのsetting.jsonの`rust-client.rustupPath`にrustupのpathを設定
+
+```json
+{
+  "rust-client.rustupPath": "/Users/USER/.cargo/bin/rustup"
+}
+```
+
+3. 「RLS not installed.Install?」って聞かれるので、Yesをクリック。
